@@ -19,7 +19,8 @@ const CardClima = ({key, dia, temperatura, viento, descripcion }) => {
     if (descripcion === "Clear"){ return (faMoon) }
   } 
   return(
-    <div className="container bg-info rounded m-3 p-3 border shadow-lg">
+    <div className="container rounded m-3 p-3 border shadow-lg cardClima text-white d-flex">
+    <div className="">
       <h2>{
           dia==="Ahora"? 
             dia 
@@ -29,9 +30,14 @@ const CardClima = ({key, dia, temperatura, viento, descripcion }) => {
       }</h2>
       <p>Temperatura: {temperatura} </p>
       <p>Viento: {viento}</p>
-      {descripcion && <p>Descripcion: {descripcion} <FontAwesomeIcon icon={asignarIcono()} /></p>}
-      {/* {descripcion && <p>Descripcion: {descripcion} {asignarIcono()}</p>} */}
+      {descripcion && <p>Descripcion: {descripcion} </p>}
     </div>
+    <div className="fs-1 m-4 p-3">
+      {descripcion && <FontAwesomeIcon icon={asignarIcono()} />}
+    </div>
+
+    </div>
+
   )
 }
 

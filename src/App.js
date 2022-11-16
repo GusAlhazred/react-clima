@@ -36,7 +36,7 @@ function App() {
   }),[])
 
   return (
-    <div className="">
+    <div className="App">
       {
         clima.map((item, index) =>
         <CardClima 
